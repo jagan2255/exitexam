@@ -1,0 +1,21 @@
+<div class="d-flex justify-content-center align-item-center homebody">
+
+    <div class="forms">
+        <form class="shadow" #form="ngForm" (ngSubmit)="form.valid&&loginuser()">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input class="form-control" type="email" disabled required #email="ngModel" name="email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" [(ngModel)]="userdata.email" >
+             
+            </div>
+            <div class="mb-3">
+                <label for="otp" class="form-label">Enter OTP</label>
+                <input class="form-control" type="number"  required #otp="ngModel" maxlength="5" name="otp"  [(ngModel)]="userdata.otp" >
+                
+              </div>
+            <div class="mt-4 text-center">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+    </div>
+
+</div>

@@ -1,0 +1,15 @@
+.data{
+     margin-top: 150px;
+}
+
+h3{
+    padding: 50px;
+    background-color: blanchedalmond;
+    border:2px solid black
+}
+
+.homedata{
+    background-color: rgba(70, 131, 180, 0.284);
+    height: 92vh;
+
+}

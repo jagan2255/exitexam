@@ -1,0 +1,17 @@
+<div class="d-flex justify-content-center align-item-center homebody">
+
+    <div class="forms">
+        <form class="shadow" #form="ngForm" (ngSubmit)="form.valid&&getuser()">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input class="form-control" type="email"  required #email="ngModel" name="email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" [(ngModel)]="userdata.email" >
+              <small class="text-danger" *ngIf="form.submitted&&email.errors?.['required']">*Email required</small>
+              <small class="text-danger" *ngIf="form.submitted&&email.errors?.['pattern']">*Enter valid email address</small>
+            </div>
+            <div class="mt-4 text-center">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+    </div>
+
+</div>

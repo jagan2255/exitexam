@@ -1,0 +1,16 @@
+.homebody{
+    min-height: 91vh;
+    background-color: rgba(70, 131, 180, 0.197);
+}
+
+.forms{
+    padding-top: 95px;
+}
+form{
+    border: 1px solid white;
+    padding: 40px;
+    border-radius: 25px;
+    width: 450px;
+    background-color: wheat;
+
+}
