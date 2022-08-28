@@ -10,7 +10,8 @@
             <div class="mb-3">
                 <label for="otp" class="form-label">Enter OTP</label>
                 <input class="form-control" type="number"  required #otp="ngModel" maxlength="5" name="otp"  [(ngModel)]="userdata.otp" >
-                
+                <small class="text-danger" *ngIf="form.submitted&&otp.errors?.['required']">*Enter OTP</small>
+
               </div>
             <div class="mt-4 text-center">
                 <button type="submit" class="btn btn-primary">Submit</button>

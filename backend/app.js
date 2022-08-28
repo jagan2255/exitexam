@@ -38,7 +38,7 @@ app.post("/getdata" , (req,res)=>{
         service: 'gmail',
         auth: {
             user: 'jaganvjs.india@gmail.com',
-            pass: 'yourpassword'
+            pass: 'tohjtzydrzcbwaci'
         }
     });
       
@@ -47,7 +47,7 @@ app.post("/getdata" , (req,res)=>{
         from: 'jaganvjs.india@gmail.com',
         to: user.email,
         subject: 'Your OTP for login',
-        text: otpgen +`is the OTP for login to XYZ App. Pls do not share it with anyone.`
+        text: otpgen + ` is the OTP for login to XYZ App. Pls do not share it with anyone.`
 
 
     };
@@ -74,7 +74,7 @@ app.post("/getdata" , (req,res)=>{
     email1=req.body.email;
     otp1=req.body.otp;
 
-    userdata.find({otp:otp1})
+    userdata.findOne({"email":email1 , "otp":otp1})
     .then((data)=>{
         console.log(data)
         if(data===null){
